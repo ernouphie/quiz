@@ -124,5 +124,22 @@ public class ThirdQuestion extends AppCompatActivity {
         }
     }
     @Override
-    public void onBackPressed() { }
+    public void onBackPressed() {
+        TextView text_no_back = (TextView) findViewById(R.id.text_no_back);
+        text_no_back.setAlpha(0f);
+        text_no_back.setVisibility(View.VISIBLE);
+        text_no_back.animate()
+                .alpha(0.5f)
+                .setDuration(400)
+                .setListener(null);
+        text_no_back.animate()
+                .alpha(0.5f)
+                .setDuration(400)
+                .setListener(null);
+        text_no_back.animate()
+                .alpha(0f)
+                .setDuration(400)
+                .setListener(null);
+
+    }
 }
